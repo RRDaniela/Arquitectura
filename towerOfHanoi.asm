@@ -10,7 +10,8 @@ main:
 	#	towerOfHanoi(n, 'A', 'C', 'B'); // A, B and C are names of rods
 	#	return 0;
 	#}
-	addi t0, zero, 0 #int i = 0
+	addi s0, s0, 1 #Para que los números guardados en memoria vayan del 1 a n.
+	addi t0, zero, 1 #int i = 0
 	add t1, zero, s0 #int n = número de discos
 	sw t0, 0(t2)
 	addi t0, t0, 1 #Incrementa t0 en 1
