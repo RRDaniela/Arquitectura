@@ -2,7 +2,7 @@
 #Claudio Heredia Luna
 .text
 	addi s0, zero, 3 #Número de discos, n = ?
-	lui s1, 0x10010 #Apuntador a A
+	lui t2, 0x10010 #Apuntador a A
 main: 
 	#int main()
 	#{
@@ -12,13 +12,14 @@ main:
 	#}
 	addi t0, zero, 0 #int i = 0
 	add t1, zero, s0 #int n = número de discos
-	sw t0, 0(s1)
+	sw t0, 0(t2)
 	addi t0, t0, 1 #Incrementa t0 en 1
 for:
 	bge t0, t1, end #for(int i = 0; i<n; i++);
 	nop
-	sw t0, 4(s1)
+	sw t0, 4(t2)
 	addi t0, t0, 1 #Incrementa t0 en 1
+	addi t2, t2, 4
 	jal zero, for
 	jal towerOfHanoi
 	jal end
