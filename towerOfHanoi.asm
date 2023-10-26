@@ -1,5 +1,7 @@
+#Claudio Heredia Luna
+#Daniela Isabel Rodríguez Robles
 .text
-	addi s0, zero, 15 #Número de discos n = 3
+	addi s0, zero, 15  #Número de discos n = 3
 	addi s1, zero, 1 #int i = 0
 	addi s3, s0, 1 #n += 1
 	lui s2, 0x10010 #Apuntador a memoria
